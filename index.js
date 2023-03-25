@@ -1,7 +1,7 @@
 const request= require('request');
 const TelegramBot = require('node-telegram-bot-api');
 
-const token='5836873351:AAGd_AtgARDowQHwjWjXtLL_U1VwTthaRPc';
+const token='6215984155:AAF6BAQra6PNHQAD5wSMRvd91yzOaWcBY-0';
 
 const bot = new TelegramBot(token,{polling:true});
 
@@ -19,11 +19,8 @@ console.log(JSON.parse(body));
 
 if(JSON.parse(body).cod!='404'){
    
-           bot.sendMessage(mg.chat.id,'City name--'+JSON.parse(body).name);
-           bot.sendMessage(mg.chat.id,'temparature--'+JSON.parse(body).main.temp);
-           bot.sendMessage(mg.chat.id,'Situation--'+JSON.parse(body).weather[0].main);
-          bot.sendMessage(mg.chat.id,'country-code--'+JSON.parse(body).sys.country);
-            bot.sendMessage(mg.chat.id,'Description--'+JSON.parse(body).weather[0].description);}
+          
+           }
             else{
               bot.sendMessage(mg.chat.id,"place not found");
             }
